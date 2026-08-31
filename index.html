@@ -14,14 +14,14 @@
     <header class="header"> <!--шапка страницы-->
       <nav class="header_menu"> <!--Меню страницы в шапке-->
         <ul class="header__links-list">
-          <li class="header__links-list-item_no-bullit"><a>главная</a></li>
-          <li><a href="#lots_content_menu" class="header_menu_lots">посмотреть лоты</a></li>
-          <li><a href="#about_menu" class="header_menu_auction">об аукционе</a></li>
+          <li class="header__links-list-item_no-bullit"><a href="#0" class="header__link header__link_active">главная</a></li>
+          <li><a href="#lots_content_menu" class="header__link">посмотреть лоты</a></li>
+          <li><a href="#about_menu" class="header__link">об аукционе</a></li>
         </ul>
       </nav>
       <div class="header__logo">
         <a class="header__logo-image"> <!--Логотип страницы в шапке-->
-          <img src="images/logo-black.svg" alt="логотип">
+          <img src="images/logo-black.svg" alt="название компании">
         </a>
       </div>
       <div class="address">
@@ -35,7 +35,6 @@
     <main> <!--Основная часть страницы-->
       <section class="cover" id="cover_menu"> <!--Первый блок с основной информацией-->
         <div class="overlay"></div>
-        <div class="cover_img" style="background-image: url(images/cover.jpg);">
         </div>
         <h1 class="cover_heading">
           <span class="accent_span_text_left">оно</span>
@@ -49,30 +48,30 @@
       </section>
 
       <section class="lots_content" id="lots_content_menu"> <!--Второй блок с основной информацией-->
-        <h2>Лоты</h2>
+        <h2 class="lots__heading">Лоты</h2>
         <nav class="lots">
           <ul class="lots__card-list">
-            <li class="lots__card-list-item" style="background-image: url(images/card-lot-01.jpg);"> <!--Кадр о фильме--> 
+            <li class="lots__card-list-item"> <!--Кадр о фильме--> 
               <a class="card-link">
-                <article class="card">
+                <article class="card" style="background-image: url(images/card-lot-01.jpg);">
                   <div class="overlay"></div>
                   <h3>Фильм режиссёра, который бросил киношколу</h3>
                   <p class="card__text">Не просто бросил, а ушёл с первой лекции. Какой была бы ваша ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?</p>
                 </article>
               </a>
             </li>
-            <li class="lots__card-list-item" style="background-image: url(images/card-lot-02.jpg);"> <!--Кадр о книге-->
+            <li class="lots__card-list-item"> <!--Кадр о книге-->
               <a class="card-link">
-                <article class="card">
+                <article class="card" style="background-image: url(images/card-lot-02.jpg);">
                   <div class="overlay"></div>
                   <h3>Книга, где описан один скучный день из жизни рекламного агента</h3> 
                   <p class="card__text">Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. В ней одновременно рассказывается о 16 июня 1904 года и об истории литературы, начиная с античных времён. И это всё накладывается на эпическую поэму Гомера. Сколько бы вы поставили на «Улисса» Джеймса Джойса?</p>
                 </article>
               </a>
             </li>
-            <li class="lots__card-list-item" style="background-image: url(images/card-lot-03.jpg);"> <!--Кадр о картине-->
+            <li class="lots__card-list-item"> <!--Кадр о картине-->
               <a class="card-link">
-                <article class="card">
+                <article class="card" style="background-image: url(images/card-lot-03.jpg);">
                   <div class="overlay"></div>
                   <h3>Картина, которую повторит даже 5-летний сын маминой подруги</h3>
                   <p class="card__text">Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее на инфузорию-туфельку. Никаких полей, лесов, котиков... Сколько бы вы на такое поставили, если бы не знали, что это — одна из революционных работ Кандинского?</p>
@@ -86,13 +85,14 @@
 
       <section class="about" id="about_menu"> <!--Третий блок с основной информацией-->
         <div class="logo_white">
-          <a class="about_logo_white">
-            <div class="about__logo"></div>
-            <img class="about__logo-image" src="images/logo-white.svg" alt="логотип">
+          <a class="about_logo">
+            <div class="about__logo_circle">
+              <img class="about__logo-image" src="images/logo-white.svg" alt="название компании">
+            </div>
           </a>
         </div>
         <div class="auction">
-          <h4>Об аукционе</h4>
+          <h2 class="about__title">Об аукционе</h2>
           <div class="about__text">
             <p>Здесь вы не встретите очередное пафосное собрание невероятно дорогого антиквариата. Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи, созданные любителями?</p>
             <p>Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными. Но, несмотря
@@ -113,22 +113,30 @@
 
       <nav class="footer_menu"> <!--Колонка с меню страницы -->
         <ul class="footer__menu-list">
-          <li><a href="#cover_menu" class="footer_menu_main">главная</a></li>
-          <li><a href="#lots_content_menu" class="footer_menu_lots">посмотреть лоты</a></li>
-          <li><a href="#about_menu" class="footer_menu_auction">об аукционе</a></li>
+          <li><a href="#cover_menu" class="footer__menu-link footer__menu-link_active">главная</a></li>
+          <li><a href="#lots_content_menu" class="footer__menu-link">посмотреть лоты</a></li>
+          <li><a href="#about_menu" class="footer__menu-link">об аукционе</a></li>
         </ul>
       </nav>
 
       <div class="socials"> <!--Колонка с социальными сетями-->
-        <a href="#0" class="youtube">
-          <img src="images/yt.svg" alt="Знак ютуба">
-        </a>
-        <a href="#0" class="vk">
-          <img src="images/vk.svg" alt="Знак вконтакте">
-        </a>
-        <a href="#0" class="pinterest">
-          <img src="images/pinterest.svg" alt="Знак пинтереста">
-        </a>
+        <ul class="footer__social-list">
+          <li class="footer__social-list-item">
+            <a href="#0" class="footer__social-icon">
+              <img src="images/yt.svg" alt="Знак ютуба">
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a href="#0" class="footer__social-icon">
+              <img src="images/vk.svg" alt="Знак вконтакте">
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a href="#0" class="footer__social-icon">
+              <img src="images/pinterest.svg" alt="Знак пинтереста">
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>
